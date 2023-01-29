@@ -7,9 +7,9 @@ async function getPosts() {
     return res.json();
 }
 
-export default function PostsBlock (){
+export default function ContentBlock (){
     let posts = use(getPosts());
-    console.log(posts);
+    // console.log(posts);
     
     return (<>
         {posts.map(el => {

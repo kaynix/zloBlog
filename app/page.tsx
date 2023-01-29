@@ -1,11 +1,17 @@
-import PostsBlock from '../components/PostsBlock/PostsBlock'
+import ContentBlock from '../components/ContentBlock/ContentBlock'
+import PromoBlock from '../components/PromoBlock/PromoBlock'
 
 export default function Root() {
   return (
-    <div>
+    
       <main>
-        <PostsBlock/>
+        {/* <section>
+          <PromoBlock />
+        </section> */}
+        <section className="container grid grid-flow-col auto-cols-fr">
+          <ContentBlock />
+        </section>
       </main>
-    </div>
+    
   )
 }
