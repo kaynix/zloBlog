@@ -4,11 +4,11 @@ import PromoBlock from '../components/PromoBlock/PromoBlock'
 export default function Root() {
   return (
     
-      <main>
+      <main className="h-full w-full grow">
         {/* <section>
           <PromoBlock />
         </section> */}
-        <section className="container grid grid-flow-col auto-cols-fr">
+        <section className="container grid grid-auto-flow grid-flow-col">
           <ContentBlock />
         </section>
       </main>

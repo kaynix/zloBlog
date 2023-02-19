@@ -1,9 +1,10 @@
 import styles from './page.module.css'
 
-export default function post() {
+export default function post(props) {
   return (
-    <div className={styles.main}>
-      <p>content blogs1</p>
-    </div>
+    <section className={styles.main}>
+      <h1>props.title</h1>
+      <p>blogs by ID - content </p>
+    </section>
   )
 }
