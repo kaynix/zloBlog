@@ -9,8 +9,8 @@ export default function RootLayout({
 }) {  
   return (
     <html lang="ru" className='h-full'>
-      <body className='h-full mx-auto p-2 flex flex-1 flex-col'>
-      {/* <body className='container mx-auto px-1'> */}
+      {/* <body className='h-full mx-auto p-2 flex flex-1 flex-col'> */}
+      <body className='container mx-auto px-1'>
         <Header/>
         {children}
         <Footer/>
