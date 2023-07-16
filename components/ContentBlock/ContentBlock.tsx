@@ -1,5 +1,6 @@
 import { use } from "react";
 import PostItem from "./PostItem/PostItem"
+import Link from "next/link";
 
 async function getPosts() {
     let res =  await fetch("http://localhost:3000/api/posts");
@@ -9,11 +10,12 @@ async function getPosts() {
 
 export default function ContentBlock (){
     let posts = use(getPosts());
-    // console.log(posts);
+    console.log(posts);
     
     return (<>
-        {posts.map(el => {
-            return (<><PostItem title={el.title} content={el.content} key={el.title} /></>); //<div className="divider divider-horizontal"></div>
+        {posts.map(el => { console.log(el);
+        
+            return (<Link key={el.id} href={`/blogpost/${el.id}`}><PostItem id={el.id}  title={el.title} content={el.content} key={el.title}/> </Link>);
         })}
     </>)
 }
