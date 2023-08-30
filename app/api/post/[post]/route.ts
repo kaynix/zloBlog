@@ -42,9 +42,9 @@ export async function GET(
   // res: NextApiResponse<PostData[]>
 ){
   
-  let id = 5;
+  // let id = 5;
   // console.log(req.nextUrl);
-  console.log(parseInt(params.params.post));
+  // console.log(parseInt(params.params.post));
     
   /*database reqest here */
   return NextResponse.json(fromDb.find(it=> it.id===parseInt(params.params.post)))

@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function PostItem({ id, title, content, author, date }) {
   return (
     <div className="card lg:card-compact w-full h-full bg-base-100 shadow-xl">
-  <figure><Image src="/fr_jacket.webp" alt="Shoes" /></figure>
+  <figure><img src="/fr_jacket.webp" alt="Shoes"/></figure>
   <div className="card-body">
     <h2 className="card-title">
     {title}
