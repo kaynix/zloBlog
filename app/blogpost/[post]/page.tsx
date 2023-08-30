@@ -1,6 +1,7 @@
 'use client'
 import { use } from "react";
 import { PostData } from "../../api/post/[post]/route";
+import Image from "next/image";
 
 async function getPostById(id:PostData) {
   try {
@@ -23,6 +24,14 @@ export default function post({params}) {
   
   return (
     <section>
+      <Image
+      src={pstdata.img_url}
+      width={820}
+      height={820}
+      alt=''
+      loading = 'lazy'
+      className="block m-auto p-5"
+    />
       <h1>{`#${pstdata.id} ${pstdata.title}`}</h1>
       <p>{`${pstdata.content}`}</p>
     </section>

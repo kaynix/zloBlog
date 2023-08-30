@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  h1 {
+    @apply text-4xl text-center mb-4 mt-4;
+  }
+  h2 {
+    @apply text-2xl text-center mb-4 mt-4;
+  }
+  p {
+    @apply indent-4 mb-2 mt-2
+  }
+}
+
 html,
 body {
   padding: 0;
