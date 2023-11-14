@@ -12,7 +12,7 @@ export type PostData = {
 
 }
 
-let fromDb:PostData[] = [
+export const DATA_fromDb:PostData[] = [
   { id:1, img_url: "/fr_jacket.webp", title: 'День из жизни патриота1', content: 'Текст текст1', postedDate:dayjs().format("DD.MM.YYYY").toString(), author:"Konstantin" },
   { id:2, img_url: "/fr_jacket.webp", title: 'День из жизни патриота1', content: 'Текст текст1', postedDate:dayjs().format("DD.MM.YYYY").toString(), author:"Konstantin" },
   { id:3, img_url: "/fr_jacket.webp", title: 'День из жизни патриота1', content: 'Текст текст1', postedDate:dayjs().format("DD.MM.YYYY").toString(), author:"Konstantin" },
@@ -42,10 +42,10 @@ export async function GET(
   // res: NextApiResponse<PostData[]>
 ){
   
-  // let id = 5;
+  let id = 5;
   // console.log(req.nextUrl);
-  // console.log(parseInt(params.params.post));
+  console.log(parseInt(params.params.post));
     
   /*database reqest here */
-  return NextResponse.json(fromDb.find(it=> it.id===parseInt(params.params.post)))
+  return NextResponse.json(DATA_fromDb.find(it=> it.id===parseInt(params.params.post)))
 }
