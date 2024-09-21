@@ -1,0 +1,5 @@
+- Сделать пересилку/трансфер контента между сайтами
+- несколько сайтов с одной архитектороу (хуйТВ, Блог Злого Константина, Алюминий ЛТД шоп)
+- https://carboline.ua/product/pinoplast-pvkh-airex-c7055-4-mm-1150-kh-2450-mm-airex-ag  - отображать наявность в магазине
+- https://inter-composite.com/oformit-zakaz/#contentwrap   -  корзина - редактирование в корзине сразу, даже если наклацал хуйню
+- https://evek.org/price/price-list-menu.html?term=%D0%BA%D1%80%D1%83%D0%B3%2012%D1%8518%D0%BD10%D1%82&warehouse[]=1  - динамическая таблица списка товаров

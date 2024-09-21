@@ -8,7 +8,7 @@ export default function Root() {
         {/* <section>
           <PromoBlock />
         </section> */}
-        <section className="container py-4 grid grid-cols-3 gap-4">
+        <section className="container py-4 grid lg:grid-cols-3 gap-4 md:grid-cols-1">
           <ContentBlock />
         </section>
       </main>
