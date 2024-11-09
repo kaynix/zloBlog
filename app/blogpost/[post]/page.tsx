@@ -2,11 +2,12 @@
 import { use } from "react";
 import { PostData } from "../../api/post/[post]/route";
 import Image from "next/image";
+import dayjs from "dayjs";
 
 async function getPostById(id:PostData) {
   try {
     let res =  await fetch(`http://localhost:3000/api/post/${id}`);
-    console.log(res.status);
+    // console.log(res.status);
     
     if(res.status === 200){return res.json()} else {return {}}
   } catch (error) {
@@ -18,7 +19,7 @@ async function getPostById(id:PostData) {
 
 export default function post({params}) {
   let pstdata:PostData = use(getPostById(params.post))
-  console.log("asddsa: ",params);
+  // console.log("asddsa: ",params);
   console.log(pstdata);
   
   
@@ -34,6 +35,8 @@ export default function post({params}) {
     />
       <h1>{`#${pstdata.id} ${pstdata.title}`}</h1>
       <p>{`${pstdata.content}`}</p>
+      <div className="badge badge-outline">{pstdata.author}</div>
+      <div className="badge badge-outline">{dayjs(pstdata.postedDate).format("DD.MM.YYYY")}</div>
     </section>
   )
 }

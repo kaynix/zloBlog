@@ -5,8 +5,10 @@ import { PostData } from "../../app/api/post/[post]/route";
 
 async function getPosts() {
     let res =  await fetch("http://localhost:3000/api/posts");
+    let data = res.json();
+    // console.log(data);
     
-    return res.json();
+    return data;
 }
 
 export default function ContentBlock (){
